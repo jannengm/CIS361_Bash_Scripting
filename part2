@@ -1,0 +1,57 @@
+Script started on Wed 07 Dec 2016 07:14:13 PM EST
+$
+$#----------Part 2 Sample Output----------
+$
+$ls
+cis361p4.zip  data.txt  makefile  noise.txt  part2  test.dat  unzip.sh
+$
+$./unzip.sh cis361p4.zip
+Enter directory name: test
+$
+$ls
+cis361p4.zip  data.txt  makefile  noise.txt  part2  report  test  test.dat  unzip.sh
+$
+$ls test/*
+test/edwardsj:
+cipher  cipher.c  cipher.o  LetFreq.txt  makefile  memo.txt
+
+test/harrisr:
+cipher  cipher.c  cipher.o  LetFreq.txt  makefile  memo.txt
+
+test/smitht:
+cipher  cipher.c  cipher.o  LetFreq.txt  makefile  memo.txt
+$
+$cat report
+make: Entering directory '/mnt/0EEED517EED4F843/Mark/workspace/CIS361/Project_3/test/edwardsj'
+cc    -c -o cipher.o cipher.c
+gcc cipher.o -o cipher
+make: Leaving directory '/mnt/0EEED517EED4F843/Mark/workspace/CIS361/Project_3/test/edwardsj'
+make: Entering directory '/mnt/0EEED517EED4F843/Mark/workspace/CIS361/Project_3/test/edwardsj'
+./cipher 1 5 ../../data.txt ../../data.out
+./cipher 2 5 ../../data.out ../../data.bak
+cat ../../data.bak
+In cryptography, a Caesar cipher, also known as Caesar's cipher, the shift cipher, Caesar's code or Caesar shift, is one of the simplest and most widely known encryption techniques. It is a type of substitution cipher in which each letter in the plaintext is replaced by a letter some fixed number of positions down the alphabet. For example, with a shift of 3, A would be replaced by D, B would become E, and so on. The method is named after Julius Caesar, who used it in his private correspondence.
+make: Leaving directory '/mnt/0EEED517EED4F843/Mark/workspace/CIS361/Project_3/test/edwardsj'
+make: Entering directory '/mnt/0EEED517EED4F843/Mark/workspace/CIS361/Project_3/test/harrisr'
+cc    -c -o cipher.o cipher.c
+gcc cipher.o -o cipher
+make: Leaving directory '/mnt/0EEED517EED4F843/Mark/workspace/CIS361/Project_3/test/harrisr'
+make: Entering directory '/mnt/0EEED517EED4F843/Mark/workspace/CIS361/Project_3/test/harrisr'
+./cipher 1 5 ../../data.txt ../../data.out
+./cipher 2 5 ../../data.out ../../data.bak
+cat ../../data.bak
+In cryptography, a Caesar cipher, also known as Caesar's cipher, the shift cipher, Caesar's code or Caesar shift, is one of the simplest and most widely known encryption techniques. It is a type of substitution cipher in which each letter in the plaintext is replaced by a letter some fixed number of positions down the alphabet. For example, with a shift of 3, A would be replaced by D, B would become E, and so on. The method is named after Julius Caesar, who used it in his private correspondence.
+make: Leaving directory '/mnt/0EEED517EED4F843/Mark/workspace/CIS361/Project_3/test/harrisr'
+make: Entering directory '/mnt/0EEED517EED4F843/Mark/workspace/CIS361/Project_3/test/smitht'
+cc    -c -o cipher.o cipher.c
+gcc cipher.o -o cipher
+make: Leaving directory '/mnt/0EEED517EED4F843/Mark/workspace/CIS361/Project_3/test/smitht'
+make: Entering directory '/mnt/0EEED517EED4F843/Mark/workspace/CIS361/Project_3/test/smitht'
+./cipher 1 5 ../../data.txt ../../data.out
+./cipher 2 5 ../../data.out ../../data.bak
+cat ../../data.bak
+In cryptography, a Caesar cipher, also known as Caesar's cipher, the shift cipher, Caesar's code or Caesar shift, is one of the simplest and most widely known encryption techniques. It is a type of substitution cipher in which each letter in the plaintext is replaced by a letter some fixed number of positions down the alphabet. For example, with a shift of 3, A would be replaced by D, B would become E, and so on. The method is named after Julius Caesar, who used it in his private correspondence.
+make: Leaving directory '/mnt/0EEED517EED4F843/Mark/workspace/CIS361/Project_3/test/smitht'
+$exit
+
+Script done on Wed 07 Dec 2016 07:15:24 PM EST
