@@ -3,9 +3,6 @@
 #Define function to process each line
 processLine()
 {
-	#How many words?
-	# echo $*
-	# echo "   $# words"
 	let i=0
 	while [[ "$i" -lt "$#" ]]; do
 		let j=0
@@ -23,9 +20,33 @@ processLine()
 	done
 }
 
+#Check for command line arguments
+if [[ "$#" -lt 1 ]]; then
+	echo "Error in $0: Missing command line arguments" 1>&2
+	# echo "$0 exited with code 1" 1>&2
+	exit 1
+fi
+
+#Check that input file exists
+if [ ! -e "$1" ]; then
+	echo "Error in $0: $1 does not exist" 1>&2
+	exit 2
+fi
+
+#Check that input file is a regular file
+if [ ! -f "$1" ]; then
+	echo "Error in $0: $1 is not a regular file" 1>&2
+	exit 3
+fi
+
+#Check the input file is readable
+if [ ! -r "$1" ]; then
+	echo "Error in $0: $1 is not readable" 1>&2
+	exit 4
+fi
+
 #Loop through each entry in the provided data file
+echo $1
 while read line; do
-	# echo $line
-	#Process the line
 	processLine $line
 done < $1
