@@ -1,5 +1,5 @@
 #! /bin/bash
-#*******************************************************************************
+################################################################################
 #CIS 361 - Project 3: Bash Script Programs
 #Part 1c
 #@author Mark Jannenga
@@ -8,12 +8,11 @@
 #generate a Key Word In Context file. This program removes all duplicate lines,
 #orders the input alphabetically, and then outputs it to a specified output
 #file.
-#*******************************************************************************
+################################################################################
 
 #Check for command line arguments
 if [[ "$#" -lt 1 ]]; then
 	echo "Error in $0: Missing command line arguments" 1>&2
-	echo "$0 exited with code 1" 1>&2
 	exit 1
 fi
 

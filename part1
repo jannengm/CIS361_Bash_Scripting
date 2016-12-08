@@ -1,0 +1,144 @@
+Script started on Thu 08 Dec 2016 10:41:20 AM EST
+$
+$###############################################################################
+$# Part 1 Sample Output
+$###############################################################################
+$
+$ls
+cis361p4.zip     data.txt             makefile   part1  sample.dat     test.dat
+createReport.sh  filterNoiseWords.sh  noise.txt  part2  shiftLines.sh  unzip.sh
+$
+$
+$#------------------------------------------------------------------------------
+$#Testing with a small sample file
+$#------------------------------------------------------------------------------
+$./shiftLines.sh sample.dat | ./filterNoiseWords.sh noise.txt | ./createReport.sh outfile.out
+$cat outfile.out
+Analysis Software Requirement
+Filters Pipes and
+Java Swing
+Pipes and Filters
+Requirement Analysis Software
+Software Requirement Analysis
+Swing Java
+
+The number of lines in the input file sample.dat is 3
+The number of lines in the output file outfile.out is 7
+$
+$
+$#------------------------------------------------------------------------------
+$#Testing with a larger sample file
+$#------------------------------------------------------------------------------
+$./shiftLines.sh test.dat | ./filterNoiseWords.sh noise.txt | ./createReport.sh outfile.out
+$cat outfile.out
+Advanced Computer Architecture
+Advanced Database Management Systems
+Algorithms Introduction to
+Applications of Discrete Mathematics
+Architecture Advanced Computer
+Architecture and Organization Computer
+Aspect-Oriented Programming
+Communications and Networking Data
+Computer Architecture Advanced
+Computer Architecture and Organization
+Computer Graphics Mathematical Elements for
+Computer Graphics Procedural Elements of
+Computer Organization
+Computer Organization Principles of
+Computer Science Computer Science Tapestry Exploring
+Computer Science Tapestry Exploring Computer Science
+Computing Distributed
+Computing Systems Introduction to
+Concepts Database System
+Database Management Systems Advanced
+Database System Concepts
+Data Communications and Networking
+Design Fundamentals of Digital Logic Design with VHDL
+Design Introduction to Logic
+Design with VHDL Design Fundamentals of Digital Logic
+Digital Logic Design with VHDL Design Fundamentals of
+Discrete Mathematics Applications of
+Distributed Computing
+Elements for Computer Graphics Mathematical
+Elements of Computer Graphics Procedural
+Engineers An Object Oriented Programming Primer for
+Engineers Intro to the Internet for
+Exploring Computer Science Computer Science Tapestry
+Exposed Hacking
+Fundamentals of Digital Logic Design with VHDL Design
+Fundamentals of the Internet and the World Wide Web
+Graphics Mathematical Elements for Computer
+Graphics Procedural Elements of Computer
+Guide The UNIX Ultimate
+Hacking Exposed
+Handbook for Object-Oriented Programming with Java A
+Internet and the World Wide Web Fundamentals of the
+Internet for Engineers Intro to the
+Introduction to Algorithms
+Introduction to Computing Systems
+Introduction to Logic Design
+Intro to the Internet for Engineers
+Java A Handbook for Object-Oriented Programming with
+Learning Machine
+Logic Design Introduction to
+Logic Design with VHDL Design Fundamentals of Digital
+Machine Learning
+Management Systems Advanced Database
+Mathematical Elements for Computer Graphics
+Mathematics Applications of Discrete
+Networking Data Communications and
+Object Oriented Programming Primer for Engineers An
+Object-Oriented Programming with Java A Handbook for
+Organization Computer
+Organization Computer Architecture and
+Organization Principles of Computer
+Oriented Programming Primer for Engineers An Object
+Primer for Engineers An Object Oriented Programming
+Principles of Computer Organization
+Procedural Elements of Computer Graphics
+Programming Aspect-Oriented
+Programming Primer for Engineers An Object Oriented
+Programming with Java A Handbook for Object-Oriented
+Real-Time Systems
+Science Computer Science Tapestry Exploring Computer
+Science Tapestry Exploring Computer Science Computer
+System Concepts Database
+Systems Advanced Database Management
+Systems Introduction to Computing
+Systems Real-Time
+Tapestry Exploring Computer Science Computer Science
+the Internet and the World Wide Web Fundamentals of
+the Internet for Engineers Intro to
+the World Wide Web Fundamentals of the Internet and
+Ultimate Guide The UNIX
+UNIX Ultimate Guide The
+VHDL Design Fundamentals of Digital Logic Design with
+Web Fundamentals of the Internet and the World Wide
+Wide Web Fundamentals of the Internet and the World
+World Wide Web Fundamentals of the Internet and the
+
+The number of lines in the input file test.dat is 31
+The number of lines in the output file outfile.out is 85
+$
+$
+$#------------------------------------------------------------------------------
+$#Testing missing arguments
+$#------------------------------------------------------------------------------
+$./shiftLines.sh | ./filterNoiseWords.sh noise.txt | ./createReport.sh outfile.out
+Error in ./shiftLines.sh: Missing command line arguments
+$./shiftLines.sh sample.dat | ./filterNoiseWords.sh | ./createReport.sh outfile.out
+Error in ./filterNoiseWords.sh: Missing command line arguments
+$./shiftLines.sh sample.dat | ./filterNoiseWords.sh noise.txt | ./createReport.sh
+Error in ./createReport.sh: Missing command line arguments
+$
+$
+$#------------------------------------------------------------------------------
+$#Testing bad inputs
+$#------------------------------------------------------------------------------
+$./shiftLines.sh testtt.dat | ./filterNoiseWords.sh noise.txt | ./createReport.sh outfile.out
+Error in ./shiftLines.sh: testtt.dat does not exist
+$./shiftLines.sh test.dat | ./filterNoiseWords.sh noi.txt | ./createReport.sh outfile.out
+Error in ./filterNoiseWords.sh: noi.txt does not exist
+$exit
+
+Script done on Thu 08 Dec 2016 10:45:21 AM EST

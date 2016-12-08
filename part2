@@ -1,6 +1,8 @@
 Script started on Wed 07 Dec 2016 07:14:13 PM EST
 $
-$#----------Part 2 Sample Output----------
+$###############################################################################
+$# Part 2 Sample Output
+$###############################################################################
 $
 $ls
 cis361p4.zip  data.txt  makefile  noise.txt  part2  test.dat  unzip.sh

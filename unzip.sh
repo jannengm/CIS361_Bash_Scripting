@@ -1,5 +1,5 @@
 #! /bin/bash
-#*******************************************************************************
+################################################################################
 #CIS 361 - Project 3: Bash Script Programs
 #Part 2
 #@author Mark Jannenga
@@ -8,7 +8,7 @@
 #directories for each student, place that student's submitted files into each
 #directory, then compiles and tests each submission using make. The results
 #of the testing are saved in a file called "report"
-#*******************************************************************************
+################################################################################
 
 #Prompt user for name of the data directory
 echo -n "Enter directory name: "

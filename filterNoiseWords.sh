@@ -1,5 +1,5 @@
 #! /bin/bash
-#*******************************************************************************
+################################################################################
 #CIS 361 - Project 3: Bash Script Programs
 #Part 1b
 #@author Mark Jannenga
@@ -8,7 +8,7 @@
 #generate a Key Word In Context file. This program prints all lines from the
 #input file that do not begin with a word contained in the file specified by
 #comnnad line arguments.
-#*******************************************************************************
+################################################################################
 
 #Prints the passed line of input only if it does not start with a word in the
 #specified file

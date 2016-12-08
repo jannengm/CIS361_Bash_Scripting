@@ -1,5 +1,5 @@
 #! /bin/bash
-#*******************************************************************************
+################################################################################
 #CIS 361 - Project 3: Bash Script Programs
 #Part 1a
 #@author Mark Jannenga
@@ -8,7 +8,7 @@
 #generate a Key Word In Context file. This program prints each line from an
 #input file, rotates the first word to the end of the line, then repeats until
 #all words on the line have been printed as the first word.
-#*******************************************************************************
+################################################################################
 
 #Define function to process each line
 processLine()
