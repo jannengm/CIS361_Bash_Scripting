@@ -1,16 +1,18 @@
 #! /bin/bash
 #*******************************************************************************
+#CIS 361 - Project 3: Bash Script Programs
+#Part 2
+#@author Mark Jannenga
+#
+#This program unzips a .zip archive formatted like a Blckboard download, creates
+#directories for each student, place that student's submitted files into each
+#directory, then compiles and tests each submission using make. The results
+#of the testing are saved in a file called "report"
 #*******************************************************************************
 
 #Prompt user for name of the data directory
 echo -n "Enter directory name: "
 read dataDirectory
-
-#Check zip archive provided as command line argument
-# if test $# -eq 1
-# 	then
-# 		echo "Must provide an argument"
-# fi
 
 #Check if that directory exists
 if test ! -d $dataDirectory
@@ -46,7 +48,6 @@ do
 done
 
 # Once all files are extracted, loop through each directory and run tests
-touch report
 for directory in $dataDirectory/*/
 do
 	make -f ../../makefile -C $directory >> report

@@ -1,6 +1,19 @@
 #! /bin/bash
+#*******************************************************************************
+#CIS 361 - Project 3: Bash Script Programs
+#Part 1b
+#@author Mark Jannenga
+#
+#This program is the second of three programs used together in a pipelin to
+#generate a Key Word In Context file. This program prints all lines from the
+#input file that do not begin with a word contained in the file specified by
+#comnnad line arguments.
+#*******************************************************************************
 
+#Prints the passed line of input only if it does not start with a word in the
+#specified file
 checkLine(){
+	#Check the file for the first word on the line
 	noiseFound=false
 	while read line; do
 		if [[ "$line" = "$2" ]]; then
@@ -8,6 +21,7 @@ checkLine(){
 		fi
 	done < $1
 
+	#Print the line only if not found above
 	if [ "$noiseFound" = false ]; then
 		echo ${*:2}
 	fi
@@ -38,6 +52,7 @@ if [ ! -r "$1" ]; then
 	exit 4
 fi
 
+#Loop through each line of piped input
 firstLine=true
 while read line; do
 	#Don't process the first line (initial input file name)
