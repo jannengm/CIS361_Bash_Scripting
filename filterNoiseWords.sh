@@ -13,7 +13,6 @@ checkLine(){
 	fi
 }
 
-echo $*
 while read line; do
 	checkLine $1 $line
 done

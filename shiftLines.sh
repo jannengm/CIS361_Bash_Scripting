@@ -1,13 +1,5 @@
 #! /bin/bash
 
-# printFromIndex(){
-# 	words=$#
-# 	i=2
-# 	while [[ "$i" -le "$words" ]]; do
-# 		let i=i+1
-# 	done
-# }
-
 #Define function to process each line
 processLine()
 {
@@ -18,9 +10,7 @@ processLine()
 	while [[ "$i" -lt "$#" ]]; do
 		let j=0
 		while [[ "$j" -lt "$#" ]]; do
-			let index=$i+$j
-			let index=index%$#
-			let index=index+1
+			let index="($i+$j)%$#+1"
 			let j=j+1
 			#Remove carriage returns
 			word=$(echo ${!index}|tr -d '\r')
